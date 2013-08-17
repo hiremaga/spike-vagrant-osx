@@ -2,15 +2,16 @@
 
 An experiment with getting an OSX guest running with Vagrant so this might eventually be used to test [Sprout](https://github.com/pivotal-sprout/sprout).
 
-## Creating an OSX box for Vagrant with Packer
 
-1. Dependencies
+### Dependencies
 
-    1. [Vmware Fusion](http://www.vmware.com/products/fusion/overview.html)
-    1. [Packer](http://www.packer.io/)
-    1. [Vagrant](http://www.vagrantup.com/)
-    1. Vagrant's [Vmware Fusion Provider](http://www.vagrantup.com/vmware)
-    1. Tim Sutton's [osx-vm-templates](https://github.com/timsutton/osx-vm-templates) for building an OSX box with Packer
+1. [Vmware Fusion](http://www.vmware.com/products/fusion/overview.html)
+1. [Packer](http://www.packer.io/)
+1. [Vagrant](http://www.vagrantup.com/)
+1. Vagrant's [Vmware Fusion Provider](http://www.vagrantup.com/vmware)
+1. Tim Sutton's [osx-vm-templates](https://github.com/timsutton/osx-vm-templates) for building an OSX box with Packer
+
+### Creating an OSX box for Vagrant with Packer
 
 1. Clone Tim Sutton's `osx-vm-templates`
 
@@ -49,7 +50,7 @@ An experiment with getting an OSX guest running with Vagrant so this might event
     vagrant box add osx packer_vmware_vmware.box
     ```
 
-## Starting the OSX guest with Vagrant
+### Starting the OSX guest with Vagrant
 
 1. Clone this repo
 
