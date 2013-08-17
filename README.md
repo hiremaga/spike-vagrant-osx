@@ -77,19 +77,19 @@ An experiment with getting an OSX guest running with Vagrant so this might event
 
 ### Run specs
 
-    ```
-    bundle install
-    bundle exec rspec
-    ```
+```
+bundle install
+bundle exec rspec
+```
 
-    If everything is setup correctly the output should be:
+If everything is setup correctly the output should be:
 
-    ```
-    → bundle exec rspec
+```
+→ bundle exec rspec
 
-    Command "uname"
-      should return stdout "Darwin"
+Command "uname"
+  should return stdout "Darwin"
 
-    Finished in 9.43 seconds
-    1 example, 0 failures
-    ```
+Finished in 9.43 seconds
+1 example, 0 failures
+```
