@@ -9,6 +9,7 @@ An experiment with getting an OSX guest running with Vagrant so this might event
 1. [Vagrant](http://www.vagrantup.com/)
 1. Vagrant's [Vmware Fusion Provider](http://www.vagrantup.com/vmware)
 1. Tim Sutton's [osx-vm-templates](https://github.com/timsutton/osx-vm-templates) for building an OSX box with Packer
+1. [ServerSpec](http://serverspec.org/)
 
 ### Creating an OSX box for Vagrant with Packer
 
@@ -74,8 +75,21 @@ An experiment with getting an OSX guest running with Vagrant so this might event
     by creating a plugin or reporting a bug.
     ```
 
-1. Smoke test the new box
+### Run specs
 
     ```
-    vagrant ssh -c 'uname' # → Darwin
+    bundle install
+    bundle exec rspec
+    ```
+
+    If everything is setup correctly the output should be:
+
+    ```
+    → bundle exec rspec
+
+    Command "uname"
+      should return stdout "Darwin"
+
+    Finished in 9.43 seconds
+    1 example, 0 failures
     ```
