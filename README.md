@@ -2,7 +2,6 @@
 
 An experiment with getting an OSX guest running with Vagrant so this might eventually be used to test [Sprout](https://github.com/pivotal-sprout/sprout).
 
-
 ### Dependencies
 
 1. [Vmware Fusion](http://www.vmware.com/products/fusion/overview.html)
@@ -13,7 +12,7 @@ An experiment with getting an OSX guest running with Vagrant so this might event
 
 ### Creating an OSX box for Vagrant with Packer
 
-1. Clone Tim Sutton's `osx-vm-templates`
+1. Clone Tim Sutton's [osx-vm-templates](https://github.com/timsutton/osx-vm-templates)
 
     ```
     git clone https://github.com/timsutton/osx-vm-templates
@@ -30,11 +29,11 @@ An experiment with getting an OSX guest running with Vagrant so this might event
 
     Take note of the checksum of the generated image and its full path from the output of this command, you'll need this in a moment.
 
-1. Edit the Packer template for the `packer/template.json`
+1. Edit the Packer template [packer/template.json](https://github.com/timsutton/osx-vm-templates/blob/master/packer/template.json)
 
-    1. Edit the checksum so it matches the image generated earlier
-    1. Edit the absolute path to the image generated earlier, keeping the `file:///` prefix in the example
-    1. Remove the `chef-omnibus.sh` and `puppet.sh` scripts from the list `provisioners`
+    1. Change [iso_checksum](https://github.com/timsutton/osx-vm-templates/blob/master/packer/template.json#L8) to the checksum of the image generated earlier
+    1. Change [iso_url](https://github.com/timsutton/osx-vm-templates/blob/master/packer/template.json#L9) to the absolute path of the image generated earlier, keep the `file:///` prefix.
+    1. Remove the `chef-omnibus.sh` and `puppet.sh` scripts from the list of [provisioners](https://github.com/timsutton/osx-vm-templates/blob/master/packer/template.json#L35)
     1. Don't forget to save the file!
 
 1. Create a new box with Packer
