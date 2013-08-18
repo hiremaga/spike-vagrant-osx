@@ -25,7 +25,7 @@ An experiment with getting an OSX guest running with Vagrant so this might event
 
     ```
     cd osx-vm-templates
-    prepare_iso/prepare_iso.sh "/Applications/Install OS X Mountain Lion.app" out
+    sudo prepare_iso/prepare_iso.sh "/Applications/Install OS X Mountain Lion.app" out
     ```
 
     Take note of the checksum of the generated image and its full path from the output of this command, you'll need this in a moment.
