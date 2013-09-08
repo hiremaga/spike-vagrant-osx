@@ -6,7 +6,7 @@ An experiment with getting an OSX guest running with Vagrant so this might event
 
 1. [Vmware Fusion](http://www.vmware.com/products/fusion/overview.html)
 1. [Packer](http://www.packer.io/)
-1. [Vagrant](http://www.vagrantup.com/)
+1. [Vagrant 1.3+](http://www.vagrantup.com/)
 1. Vagrant's [Vmware Fusion Provider](http://www.vagrantup.com/vmware)
 1. Tim Sutton's [osx-vm-templates](https://github.com/timsutton/osx-vm-templates) for building an OSX box with Packer
 1. [ServerSpec](http://serverspec.org/)
@@ -63,16 +63,6 @@ An experiment with getting an OSX guest running with Vagrant so this might event
     ```
     cd spike-vagrant-osx
     vagrant up --provider vmware_fusion
-    ```
-
-    **Caveat:** Several Vagrant commands will not work fully because Vagrant is [missing an OSX guest implementation](https://groups.google.com/d/msg/vagrant-up/VyZBqzbVzvs/j0gMiD8ofPUJ), this one of the big the features planned for Vagrant 2.0. So don't worry when you see the error below:
-
-    ```
-    The guest operating system of the machine could not be detected!
-    Vagrant requires this knowledge to perform specific tasks such
-    as mounting shared folders and configuring networks. Please add
-    the ability to detect this guest operating system to Vagrant
-    by creating a plugin or reporting a bug.
     ```
 
 ### Run specs
